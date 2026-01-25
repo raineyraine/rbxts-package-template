@@ -5,6 +5,4 @@
 
 [tools]
 rojo = "rojo-rbx/rojo@7.6.1"
-jest-companion = "jackTabsCode/jest-companion@0.2.1"
-drillbit = "jackTabsCode/drillbit@0.2.0"
 run-in-roblox = "rojo-rbx/run-in-roblox@0.3.0"
