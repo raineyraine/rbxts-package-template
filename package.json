@@ -15,7 +15,7 @@
 		"dev": "rbxtsc -w --type game --rojo test.project.json",
 		"lint": "eslint --cache",
 		"lint:fix": "eslint --cache --fix",
-		"test": "pnpm build:dev && run-in-roblox --script script/run-tests.luau --place test.rbxl"
+		"test": "pnpm build:dev && run-in-roblox --script scripts/run-tests.luau --place test.rbxl"
 	},
 	"devDependencies": {
 		"@isentinel/eslint-config": "catalog:lint",
