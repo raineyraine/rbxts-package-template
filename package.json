@@ -1,0 +1,33 @@
+{
+	"name": "rbxts-package-template",
+	"version": "1.0.0",
+	"description": "Template for roblox-ts packages.",
+	"keywords": ["rbxts", "roblox-ts"],
+	"license": "MIT",
+	"author": "",
+	"type": "module",
+	"main": "out/init.luau",
+	"types": "out/index.d.ts",
+	"files": ["out", "!**/*.tsbuildinfo", "!**/*.spec.lua", "!**/*.spec.d.ts"],
+	"scripts": {
+		"build": "rbxtsc",
+		"build:dev": "rbxtsc --type game --rojo test.project.json && rojo build test.project.json -o test.rbxl",
+		"dev": "rbxtsc -w --type game --rojo test.project.json",
+		"lint": "eslint --cache",
+		"lint:fix": "eslint --cache --fix",
+		"test": "pnpm build:dev && run-in-roblox --script script/run-tests.luau --place test.rbxl"
+	},
+	"devDependencies": {
+		"@isentinel/eslint-config": "catalog:lint",
+		"@rbxts/compiler-types": "catalog:types",
+		"@rbxts/jest": "catalog:dev",
+		"@rbxts/jest-globals": "catalog:dev",
+		"@rbxts/types": "catalog:types",
+		"eslint": "catalog:lint",
+		"eslint-plugin-pnpm": "catalog:lint",
+		"jiti": "catalog:script",
+		"roblox-ts": "catalog:build",
+		"typescript": "catalog:build"
+	},
+	"packageManager": "pnpm@10.28.1"
+}
