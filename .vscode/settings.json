@@ -34,5 +34,7 @@
 
 	"charmed-icons.associations.files": {
 		"test.project.jsonc": "roblox-config"
-	}
+	},
+
+	"luau-lsp.platform.type": "standard"
 }

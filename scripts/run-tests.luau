@@ -1,3 +1,8 @@
+--!nolint
+--!nocheck
+-- This is meant to run in Roblox
+assert(game, "run-tests.luau is meant to run in")
+
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local runCLI = require(ReplicatedStorage.rbxts_include.node_modules["@rbxts-js"].Jest).runCLI
 local chalk = require(ReplicatedStorage.rbxts_include.node_modules["@rbxts-js"]["ChalkLua"])
