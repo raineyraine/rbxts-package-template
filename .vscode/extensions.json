@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"joshbolduc.commitlint",
+		"dbaeumer.vscode-eslint",
+		"flamework.flamework-vscode",
+		"roblox-ts.vscode-roblox-ts"
+	]
+}
