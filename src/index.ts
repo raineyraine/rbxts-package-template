@@ -1,3 +1,3 @@
-export function makeHello(to = "World") {
+export function makeHello(to = "World"): string {
 	return `Hello, ${to}!`;
 }
