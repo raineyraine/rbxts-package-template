@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		// required
 		"incremental": true,
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo",
 		"target": "ESNext",
@@ -15,8 +16,8 @@
 		"module": "commonjs",
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
-		"strict": true,
 		"typeRoots": ["node_modules/@rbxts"],
+		"strict": true,
 
 		// other rules
 		"allowUnreachableCode": false,
@@ -30,10 +31,29 @@
 		"declaration": true,
 		"downlevelIteration": true,
 		"outDir": "out",
-		// required
+
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"plugins": [
+			// Uncomment if you are using Flamework
+			// {
+			// 	"transform": "rbxts-transformer-flamework",
+			// 	"obfuscation": false
+			// },
+			{
+				"transform": "rbxts-transform-debug"
+			},
+			{
+				"transform": "rbxts-transform-env",
+				"shortCircuitNodeEnv": false,
+				"defaultEnvironment": "development"
+			},
+			{
+				"name": "ts-plugin-sort-import-suggestions",
+				"moveDownPatterns": ["@rbxts"]
+			}
+		]
 	},
 	"include": ["**/*/*.ts", "**/*/*.tsx"],
 	"exclude": ["node_modules", "out", "**/.*/"]
