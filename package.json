@@ -15,9 +15,21 @@
 		"dev": "rbxtsc -w --type game --rojo test.project.json",
 		"lint": "eslint --cache",
 		"lint:fix": "eslint --cache --fix",
+		"prepare": "husky",
+		"serve:dev": "rojo serve test.project.json",
 		"test": "pnpm build:dev && run-in-roblox --script scripts/run-tests.luau --place test.rbxl"
 	},
+	"dependencies": {
+		"@flamework/core": "catalog:prod",
+		"@rbxts/react": "catalog:prod",
+		"@rbxts/react-roblox": "catalog:prod",
+		"@rbxts/ui-labs": "catalog:dev"
+	},
 	"devDependencies": {
+		"@commitlint/cli": "catalog:lint",
+		"@commitlint/config-conventional": "catalog:lint",
+		"@commitlint/prompt-cli": "catalog:lint",
+		"@commitlint/types": "catalog:types",
 		"@isentinel/eslint-config": "catalog:lint",
 		"@rbxts/compiler-types": "catalog:types",
 		"@rbxts/jest": "catalog:dev",
@@ -25,9 +37,16 @@
 		"@rbxts/types": "catalog:types",
 		"eslint": "catalog:lint",
 		"eslint-plugin-pnpm": "catalog:lint",
+		"eslint-plugin-react-hooks": "catalog:lint",
+		"eslint-plugin-react-x": "catalog:lint",
+		"husky": "catalog:script",
 		"jiti": "catalog:script",
+		"rbxts-transform-debug": "catalog:build",
+		"rbxts-transform-env": "catalog:build",
+		"rbxts-transformer-flamework": "catalog:build",
 		"roblox-ts": "catalog:build",
+		"ts-plugin-sort-import-suggestions": "catalog:types",
 		"typescript": "catalog:build"
 	},
-	"packageManager": "pnpm@10.28.1"
+	"packageManager": "pnpm@10.28.2"
 }
