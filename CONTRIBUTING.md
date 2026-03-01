@@ -1,10 +1,14 @@
 # Contributing
 
+This is a personal template, and contributions aren't actively sought out. Pull
+requests or issues are permitted, though, if you find a bug or have a
+suggestion!
+
 ## Commit Messages
 
-Cmdi uses the
-[Angular commit format](https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md)
-for commit messages. It should be made up of a header, body, and footer:
+Cmdi uses the [Conventional Commits format](www.conventionalcommits.org/en/) for
+commit messages. Commitlint is used for validating commits -- you should have
+the extension installed! It should be made up of a header, body, and footer:
 
 ```txt
 <header>
