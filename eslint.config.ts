@@ -62,6 +62,12 @@ const config = isentinel(
 		rules: {
 			// Annoying, functions can be self-descriptive just with their names
 			"jsdoc/require-description": "off",
+			"ts/explicit-function-return-type": [
+				"error",
+				{
+					allowFunctionsWithoutTypeParameters: true,
+				},
+			],
 		},
 	} satisfies TypedFlatConfigItem,
 );

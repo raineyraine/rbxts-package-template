@@ -7,7 +7,7 @@ interface HelloComponentProps extends Attributes {
 	helloTo: string;
 }
 
-export function HelloComponent({ key, helloTo, children }: Readonly<HelloComponentProps>) {
+export function HelloComponent({ children, helloTo, key }: Readonly<HelloComponentProps>) {
 	const helloText = useMemo(() => makeHello(helloTo), [helloTo]);
 
 	return (
