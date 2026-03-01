@@ -1,7 +1,7 @@
 import { type Attributes, useMemo } from "@rbxts/react";
 import React from "@rbxts/react";
 
-import { makeHello } from ".";
+import { makeHello } from "../functions/make-hello";
 
 interface HelloComponentProps extends Attributes {
 	helloTo: string;

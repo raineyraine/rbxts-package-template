@@ -2,7 +2,7 @@ import React from "@rbxts/react";
 import ReactRoblox from "@rbxts/react-roblox";
 import { CreateReactStory } from "@rbxts/ui-labs";
 
-import { HelloComponent } from "../hello-component";
+import { HelloComponent } from "../components/hello-component";
 
 const story = CreateReactStory(
 	{

@@ -1,6 +1,6 @@
 import { expect, it } from "@rbxts/jest-globals";
 
-import { makeHello } from "..";
+import { makeHello } from "../../functions/make-hello";
 
 it("should default to Hello, World!", () => {
 	expect(makeHello()).toBe("Hello, World!");
