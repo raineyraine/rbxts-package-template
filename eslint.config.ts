@@ -1,43 +1,69 @@
-import type { TypedFlatConfigItem } from "@isentinel/eslint-config";
-import isentinel from "@isentinel/eslint-config";
+import isentinel, { type TypedFlatConfigItem } from "@isentinel/eslint-config";
 
-export default isentinel(
-	// Base rules for the project
+const config = isentinel(
 	{
-		name: "project/base",
+		name: "project/root",
+		// disabled due to genuinely insane time taken for little benefit
+		formatters: {
+			lua: false,
+		},
 		namedConfigs: true,
-		type: "package",
-
 		pnpm: true,
+		// enable this if youre using react
+		// react: true,
+
 		roblox: true,
-		// react: true // Enable if you are going to use react - you will have to install dependencies for this
+		spellCheck: false,
 	},
+
+	// {
+	// 	files: ["**/*.md"],
+	// 	name: "project/markdown-perfectionist",
+	// 	rules: {
+	// 		"perfectionist/sort-imports": "off",
+	// 	},
+	// } satisfies TypedFlatConfigItem,
 	{
-		name: "project/roblox-rules",
-		files: ["src/**"],
+		// ignores: ["**.md"],
+		name: "project/sort",
 		rules: {
-			"ts/explicit-function-return-type": "off",
+			"perfectionist/sort-classes": [
+				"error",
+				{
+					partitionByNewLine: false,
+				},
+			],
+			"perfectionist/sort-enums": [
+				"error",
+				{
+					partitionByNewLine: true,
+				},
+			],
+			"perfectionist/sort-objects": [
+				"error",
+				{
+					partitionByComment: true,
+					partitionByNewLine: true,
+				},
+			],
+		},
+
+		settings: {
+			perfectionist: {
+				partitionByComment: true,
+				// would be nice to put it here but it destroys everything for
+				// markdown files, perfectionist issue with sort-imports :c
+				// partitionByNewLine: true,
+			},
 		},
 	} satisfies TypedFlatConfigItem,
 	{
-		name: "project/sort-ignore",
-		files: [
-			"eslint.config.ts",
-			"pnpm-workspace.yaml",
-			"package.json",
-			"pnpm-lock.yaml",
-			"tsconfig.json",
-		],
+		name: "project/rules",
 		rules: {
-			"perfectionist/sort-objects": "off",
-			"jsonc/sort-keys": "off",
-		},
-	} satisfies TypedFlatConfigItem,
-	{
-		name: "project/package-json",
-		files: ["package.json"],
-		rules: {
-			"package-json/require-exports": "off",
+			// Annoying, functions can be self-descriptive just with their names
+			"jsdoc/require-description": "off",
 		},
 	} satisfies TypedFlatConfigItem,
 );
+
+export default config;
