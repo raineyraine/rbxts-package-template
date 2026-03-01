@@ -36,5 +36,6 @@
 		"test.project.jsonc": "roblox-config"
 	},
 
-	"luau-lsp.platform.type": "standard"
+	"luau-lsp.platform.type": "standard",
+	"luau-lsp.ignoreGlobs": ["**/_Index/**", "**/node_modules/**"]
 }

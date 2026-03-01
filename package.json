@@ -11,13 +11,12 @@
 	"files": ["out", "!**/*.tsbuildinfo", "!**/*.spec.lua", "!**/*.spec.d.ts"],
 	"scripts": {
 		"build": "rbxtsc",
-		"build:dev": "rbxtsc --type game --rojo test.project.json && rojo build test.project.json -o test.rbxl",
-		"dev": "rbxtsc -w --type game --rojo test.project.json",
+		"build:dev": "lune run build-test-place",
+		"dev": "lune run watch-test-place",
 		"lint": "eslint --cache",
 		"lint:ci": "eslint --cache --cache-strategy content",
 		"lint:fix": "eslint --cache --fix",
 		"prepare": "husky",
-		"serve:dev": "rojo serve test.project.json",
 		"test": "pnpm build:dev && run-in-roblox --script scripts/run-tests.luau --place test.rbxl"
 	},
 	"dependencies": {
