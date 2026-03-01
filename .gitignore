@@ -6,4 +6,4 @@ include/
 .eslintcache
 
 test.rbxl
-soucemap.json
+sourcemap.json
