@@ -1,0 +1,3 @@
+# These are development scripts and don't need to be included in the language graph
+scripts/** linguist-vendored
+.lune/** linguist-vendored
