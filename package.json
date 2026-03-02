@@ -10,12 +10,13 @@
 	"types": "out/index.d.ts",
 	"files": ["out", "!**/*.tsbuildinfo", "!**/*.spec.lua", "!**/*.spec.d.ts", "!**/__tests__/**"],
 	"scripts": {
-		"build": "rbxtsc",
+		"build": "rbxtsc --verbose --type package",
 		"build:dev": "lune run build-test-place",
 		"dev": "lune run watch-test-place",
 		"lint": "eslint --cache",
 		"lint:ci": "eslint --cache --cache-strategy content",
 		"lint:fix": "eslint --cache --fix",
+		"prepack": "pnpm rbxtsc --type package --verbose",
 		"prepare": "husky",
 		"test": "pnpm build:dev && run-in-roblox --script scripts/run-tests.luau --place test.rbxl"
 	},

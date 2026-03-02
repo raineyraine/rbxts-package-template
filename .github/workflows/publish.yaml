@@ -36,10 +36,6 @@ jobs:
           node --version
           pnpm --version
 
-      - name: Build
-        run: |
-          pnpm rbxtsc --type package --verbose
-
       - name: Publish
         run: | # Remove the --dry-run when ready to really publish
           pnpm publish --tag latest --dry-run
