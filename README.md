@@ -12,6 +12,19 @@ Template for roblox-ts packages
    Rojo and watch for changes
 5. Have fun! 🎉
 
+> [!NOTE]  
+> [Flamework](https://flamework.fireboltofdeath.dev) is already automatically
+> added to this project and will run during compilation. If you do not want to
+> use Flamework, you'll have to:
+>
+> 1. Remove all Flamework packages (`@flamework/*` and
+>    `rbxts-transformer-flamework`, make sure to do this in both `package.json`
+>    and `pnpm-workspace.yaml`)
+> 2. Remove the Flamework transformer from `tsconfig.json`'s `plugins` field
+> 3. Remove the `@flamework` from `rbxts_include/node_modules` within
+>    `test.project.json`.
+> 4. Delete your `out` folder and `flamework.build`, if present.
+
 ## Publishing
 
 When publishing for the first time, use the `pnpm publish` command. Make sure

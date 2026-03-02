@@ -36,11 +36,11 @@
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
 		"plugins": [
-			// Uncomment if you are using Flamework
-			// {
-			// 	"transform": "rbxts-transformer-flamework",
-			// 	"obfuscation": false
-			// },
+			// Remove if you are not using Flamework
+			{
+				"transform": "rbxts-transformer-flamework",
+				"obfuscation": false
+			},
 			{
 				"transform": "rbxts-transform-debug"
 			},

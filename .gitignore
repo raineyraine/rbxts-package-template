@@ -2,6 +2,7 @@ node_modules/
 out/
 include/
 *.tsbuildinfo
+*.build
 
 .eslintcache
 
