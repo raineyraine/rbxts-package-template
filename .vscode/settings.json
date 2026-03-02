@@ -4,7 +4,7 @@
 	// Auto fix
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always",
-		"source.organizeImports": "never"
+		"source.organizeImports": "always"
 	},
 
 	// Silent the stylistic rules in you IDE, but still auto fix them
@@ -29,7 +29,8 @@
 		"json",
 		"jsonc",
 		"yaml",
-		"toml"
+		"toml",
+		"github-actions-workflow"
 	],
 
 	"charmed-icons.associations.files": {
