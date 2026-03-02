@@ -42,4 +42,4 @@ jobs:
 
       - name: Publish
         run: | # Remove the --dry-run when ready to really publish
-          pnpm publish --dry-run
+          pnpm publish --tag latest --dry-run
