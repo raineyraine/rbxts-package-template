@@ -4,11 +4,10 @@ on:
   push:
     tags: [v*, workflow_dispatch]
 
-
 permissions:
-  id-token: write # Required for OIDC
   contents: read
 
+  id-token: write # Required for OIDC
 jobs:
   publish:
     name: Publish to npm
@@ -35,11 +34,11 @@ jobs:
           git --version
           node --version
           pnpm --version
-      
+
       - name: Build
         run: |
           pnpm rbxtsc --type package --verbose
 
       - name: Publish
         run: | # Remove the --dry-run when ready to really publish
-          pnpm publish --dry-run  
+          pnpm publish --dry-run
