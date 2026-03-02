@@ -33,7 +33,7 @@ do
 	setColor("cyan")
 	writeLine("Building game ...")
 
-	local result = process.exec("rojo", { "build", "test.project.json", "-o", "test.rbxl", "--verbose" }, {
+	local result = process.exec("rojo", { "build", "test.project.json", "-o", "test.rbxl" }, {
 		stdio = "default",
 		shell = true,
 	})

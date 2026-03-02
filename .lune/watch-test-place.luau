@@ -13,7 +13,7 @@ do
 	setColor("cyan")
 	writeLine("Serving game ...")
 
-	local created = process.create("rojo", { "serve", "test.project.json", "--verbose" }, {
+	local created = process.create("rojo", { "serve", "test.project.json" }, {
 		shell = true,
 	})
 	outputProcessStreams("rojo", created, output.INDENT_STRING:rep(1))
